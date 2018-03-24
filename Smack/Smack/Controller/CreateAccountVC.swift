@@ -1,5 +1,5 @@
 //
-//  ChanelVC.swift
+//  CreateAccountVC.swift
 //  Smack
 //
 //  Created by Антон Грищенко on 24.03.2018.
@@ -8,21 +8,16 @@
 
 import UIKit
 
-class ChanelVC: UIViewController {
-    
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+class CreateAccountVC: UIViewController {
+
+    @IBAction func closePressed(_ sender: Any) {
+        performSegue(withIdentifier: UNWIND, sender: nil)
     }
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
