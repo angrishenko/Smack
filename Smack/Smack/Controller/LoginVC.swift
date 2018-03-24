@@ -1,5 +1,5 @@
 //
-//  ChanelVC.swift
+//  LoginVC.swift
 //  Smack
 //
 //  Created by Антон Грищенко on 24.03.2018.
@@ -8,18 +8,15 @@
 
 import UIKit
 
-class ChanelVC: UIViewController {
-    
-    @IBOutlet weak var loginBtn: UIButton!
-    
-    @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+class LoginVC: UIViewController {
+
+    @IBAction func closePressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
